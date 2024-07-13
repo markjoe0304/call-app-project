@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="main.js" defer></script>
+		<title>Lyrika</title>
+	</head>
+	<body>
+		<header>
+			<h1>Lyrics Search</h1>
+			<form id="form">
+				<input
+					type="text"
+					id="search"
+					placeholder="Enter artist or song name..." />
+				<button type="submit">Search</button>
+			</form>
+		</header>
+		<div id="result" class="container">
+			<p>Results will be displayed here</p>
+		</div>
+		<div id="more" class="container centered"></div>
+		<div id="offline-message" class="container centered" style="display: none">
+			<p>You are currently offline. Please check your internet connection.</p>
+		</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const offlineMessage = document.getElementById('offline-message');
+
+				function updateOnlineStatus() {
+					offlineMessage.style.display = navigator.onLine ? 'none' : 'block';
+				}
+
+				window.addEventListener('online', updateOnlineStatus);
+				window.addEventListener('offline', updateOnlineStatus);
+
+				updateOnlineStatus();
+			});
+		</script>
+	</body>
+</html>
