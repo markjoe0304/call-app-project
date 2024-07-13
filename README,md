@@ -1,2 +1,10 @@
-#lyrics
+# lyrics
+this app helps one to search for music lyrics of a song all you have to do is to enter the music artist or the song name of the music and the lyrics will appear.
+# requirements
 
+# 1 HTML file
+This helps one to create a web page that can be viewed in a browser 
+# 2 CSS file
+This helps one to style their html file for example using different font styles or applying text color .
+# 3 Javascript file (js)
+This is a programming language that can be used to create a wide range of web application.
