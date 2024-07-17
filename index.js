@@ -17,7 +17,7 @@ async function searchSongs(term) {
 
 async function getMoreSongs(url) {
 	try {
-		const res = await fetch(`https://cors-anywhere.herokuapp.com/${url}`); // proxy is required to avoid CORS issue
+		const res = await fetch(`https://cors-anywhere.herokuapp.com/${url}`); 
 		const data = await res.json();
 		showData(data);
 	} catch (err) {
